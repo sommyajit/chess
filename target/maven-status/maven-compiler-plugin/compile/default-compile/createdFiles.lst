@@ -1,0 +1,7 @@
+org/example/Main.class
+org/example/strategy/Piece.class
+org/example/strategy/Pawn.class
+org/example/strategy/Queen.class
+org/example/strategy/King.class
+org/example/entity/Position.class
+org/example/factory/PieceFactory.class
