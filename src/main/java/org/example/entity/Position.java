@@ -25,7 +25,7 @@ public class Position {
         this.col = col;
     }
 
-    public static boolean isValid(int row, int col) {
+    public static boolean isValid(int row, int col ) {
         return row >= 0 && row < 8 && col >= 0 && col < 8;
     }
 

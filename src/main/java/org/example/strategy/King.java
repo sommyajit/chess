@@ -1,22 +1,14 @@
 package org.example.strategy;
 
+import org.example.entity.Directions;
 import org.example.entity.Position;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class King implements Piece {
-
-    private static final int[][] DIRECTIONS = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
-
-    @Override
-    public List<Position> getPossibleMoves(Position current) {
-        List<Position> moves = new ArrayList<>();
-        for (int[] dir : DIRECTIONS) {
-            Position next = current.move(dir[0], dir[1]);
-            if (next != null)
-                moves.add(next);
-        }
-        return moves;
+public class King extends Piece {
+    public King() {
+        super(new Directions[]{Directions.UP, Directions.DOWN, Directions.LEFT, Directions.RIGHT,
+                Directions.LEFT_DIAGONAL, Directions.DOWN_LEFT_DIAGONAL, Directions.DOWN_RIGHT_DIAGONAL, Directions.RIGHT_DIAGONAL}, 1);
     }
 }

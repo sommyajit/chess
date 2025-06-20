@@ -1,9 +1,6 @@
 package org.example.factory;
 
-import org.example.strategy.King;
-import org.example.strategy.Pawn;
-import org.example.strategy.Piece;
-import org.example.strategy.Queen;
+import org.example.strategy.*;
 
 public class PieceFactory {
     public static Piece createPiece(String name) {
@@ -11,6 +8,8 @@ public class PieceFactory {
             case "KING" -> new King();
             case "QUEEN" -> new Queen();
             case "PAWN" -> new Pawn();
+            case "ROOK" -> new Rook();
+            case "BISHOP" -> new Bishop();
             default -> throw new IllegalArgumentException("Unsupported piece: " + name);
         };
     }
